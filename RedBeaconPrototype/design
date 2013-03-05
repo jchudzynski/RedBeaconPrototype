@@ -1,0 +1,147 @@
+Things to check:
+SSO within iOS
+
+Login<->Register
+MainMenu
+TableView With Sections that when selected: || -Orders -Help -User Actions
+It will be solved with CollectionView
+
+
+Orders:
+There are updated from the server. Pretty cool.
+So it looks like the tables are created on the flow. Probably from JSON File.
+    
+    Create New Order
+        Search
+        Drill Down Orders
+        Add Media
+        Media Controller (adding media) with tab bar overlay.
+        Add Location - Location Manager
+        Anything Else? (notes)
+        At the end send json file with user preferences to the server.
+        
+        How to save user's choices....?
+        By taking nodes from json received from the server, selecting the answers
+        
+        [userAnswer setValue:childNodeIndexString forKey:@"id"];
+        [userAnswer setValue:question forKey:@"question"];
+        [userAnswer setValue:answer forKey:@"answer" ];
+
+        
+
+
+
+    Check existing Order
+        Responses:
+        Chat:
+        Job Details:
+            It seems that it will 
+
+        Help? Call 1-855-RBeacon
+  
+
+Search View Controller
+Search  
+        search 
+        -> Without typing anything default categories are returned
+        -> After typing the result in, json will be returned.
+        -> Also taping on the scroll view results in sending query
+            
+            The result will be an array of the nodes in the following format:
+            "parentid":"index", "id":"index", "title":"Title","options":[{"name":"Home","childNodeId":""},...]
+            In this way the table can drill down like described in Create New Orders
+
+            Probably we need to disable the default popover behavior, so it won't disappear when people 
+            It can be done using either delegate or: self.myPopovercontroller.passthroughViews=[NSArray arrayWithObject:self.view];
+
+        Find Pro ->
+            
+
+Container View Controllers in Drill Down
+    
+
+
+
+Queries should be sent from the singleton that will be located in BeaconManager
+
+Singleton will contain:
+- logging in and out
+    - facebook
+    - regular login
+- sending queries
+- some constants like cellids and urls
+- responsible for notifications
+- displaying network activity notification +
+- responsible for keeping track of user's order
+
+
+Optional
+Access to core data?
+
+Help
+How it works
+That could be either:
+circular collection view
+    or
+scroll view (boring! but works...)
+
+
+FAQ
+    http://www.redbeacon.com/about/faq/#1
+    I am not really sure what's the url of the website used in redbeacon app.
+    
+
+Video
+Code for displaying google video. Nothing fency, it's just htmlstring from the YouTube sharing code.
+
+- (void) displayGoogleVideo
+{
+    CGRect rect = [[UIScreen mainScreen] bounds];
+    CGSize screenSize = rect.size;
+   
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0,0,screenSize.width,screenSize.height)];
+    webView.autoresizesSubviews = YES;
+    webView.autoresizingMask=(UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth);
+   
+    NSString *videoUrl = @"http://www.youtube.com/v/oHg5SJYRHA0";
+
+    NSString *htmlString = [NSString stringWithFormat:@"<html><head><meta name = \"viewport\" content = \"initial-scale = 1.0, user-scalable = no, width = 212\"/></head><body style=\"background:#F00;margin-top:0px;margin-left:0px\"><div><object width=\"320\" height=\"480\"><param name=\"movie\" value=\"%@\"></param><param name=\"wmode\" value=\"transparent\"></param><embed src=\"%@\" type=\"application/x-shockwave-flash\" wmode=\"transparent\" width=\"320\" height=\"480\"></embed></object></div></body></html>",videoUrl,videoUrl]    ;
+
+    [webView loadHTMLString:htmlString baseURL:[NSURL URLWithString:@"http://www.youtube.com"]];
+   
+    [window addSubview:webView];
+    [webView release]; // CLANG BUG FIXED
+}
+
+
+
+On the bottom scroll view or collection view with custom 3D layout
+And big red button with sign New Request.
+
+
+Somewhere in the app there should be a class that is checking the network connectivity.
+
+Also it should have notification system implemented.
+
+//Where are we saving it?
+// Probably we can build json on the flow with all information necessary.
+//We need to think about format of the cells
+//So for example:
+//Apparantly there is no way of saving drafts. It would be nice to have this function
+//but it makes it easier without it.
+
+Editing.
+Can you edit former request?
+Only a text. Good. An you can add voice recording as well. Pefect.
+
+//Sliding Effects:
+https://github.com/Inferis/ViewDeck
+
+
+
+
+
+
+
+
+

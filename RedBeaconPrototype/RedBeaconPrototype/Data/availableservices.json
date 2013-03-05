@@ -1,0 +1,80 @@
+{
+    "nodes": [
+              {
+              "parentnode": null,
+              "index": 0,
+              "title": "What would you like to clean?",
+              "options": [
+                          {
+                          "name": "Home",
+                          "childNode": 1,
+                          "selected": false
+                          },
+                          {
+                          "name": "Apartment",
+                          "childNode": 1,
+                          "selected": false
+                          },
+                          {
+                          "name": "Business",
+                          "childNode": 1,
+                          "selected": false
+                          }
+                          ]
+              },
+              {
+              "parentnode": 0,
+              "index": 1,
+              "title": "My Building is stories tall",
+              "options": [
+                          {
+                          "name": "1",
+                          "childNode": 2,
+                          "selected": false
+                          },
+                          {
+                          "name": "2",
+                          "childNode": 2,
+                          "selected": false
+                          },
+                          {
+                          "name": "3",
+                          "childNode": 2,
+                          "selected": false
+                          },
+                          {
+                          "name": "4",
+                          "childNode": 2,
+                          "selected": false
+                          }
+                          ]
+              },
+              {
+              "parentnode": 1,
+              "index": 2,
+              "title": "The Approximate square footage is",
+              "options": [
+                          {
+                          "name": "less than 1000 sqf",
+                          "childNode": null,
+                          "selected": false
+                          },
+                          {
+                          "name": "1000 - 2000 sqft",
+                          "childNode": null,
+                          "selected": false
+                          },
+                          {
+                          "name": "2000 - 3000 sqft",
+                          "childNode": null,
+                          "selected": false
+                          },
+                          {
+                          "name": "3000 + sqft",
+                          "childNode": null,
+                          "selected": false
+                          }
+                          ]
+              }
+              ]
+}
