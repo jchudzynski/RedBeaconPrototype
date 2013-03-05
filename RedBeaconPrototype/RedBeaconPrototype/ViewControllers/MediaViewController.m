@@ -261,5 +261,11 @@ didFinishWithError: (NSError *) error
     }
 }
 
+- (IBAction)cancel:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+
 
 @end

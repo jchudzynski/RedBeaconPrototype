@@ -16,7 +16,8 @@
 @implementation NewServiceReviewViewController
 
 - (IBAction)cancel:(id)sender {
-    NSLog(@"TO DO cancel button");
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 - (IBAction)useMyLocation:(id)sender {
@@ -52,5 +53,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end

@@ -9,7 +9,7 @@
 #import "SearchServicesViewController.h"
 
 @interface SearchServicesViewController ()
-- (IBAction)dismissSearch:(id)sender;
+
 
 @end
 
@@ -42,7 +42,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)dismissSearch:(id)sender {
+- (IBAction)cencel:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }

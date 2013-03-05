@@ -9,7 +9,7 @@
 #import "MainMenuViewController.h"
 #import "MainMenuDataSource.h"
 #import "WebViewController.h"
-
+#import "ServicesMenuViewController.h"
 
 @interface MainMenuViewController()
 
@@ -21,6 +21,7 @@
 @implementation MainMenuViewController
 MainMenuDataSource * datasource;
 WebViewController * webViewController;
+ServicesMenuViewController * smv;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -51,19 +52,44 @@ WebViewController * webViewController;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //we need to stop you tube video somehow
+    [webViewController.webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"about:blank"]]];
+
+    
     //we will have different actions depending on sections
+
     
     switch (indexPath.section) {
         case 0: //section 0 operations with current requests
         {
-        
+            //current home services
+            if(indexPath.row == 0) // How does it work section - > it will be implemented later
+            {
+                if(!smv){
+                smv = [self.storyboard instantiateViewControllerWithIdentifier:@"kServicesMenuViewController"];
+                }
+                 smv.view.frame = self.container.bounds;
+                [self addChildViewController: smv];
+                [self.container addSubview: smv.view];
+                [smv didMoveToParentViewController:self];
+            
+            }
+            else
+            {
+                if(!smv){
+                    smv = [self.storyboard instantiateViewControllerWithIdentifier:@"kServicesMenuViewController"];
+                }
+
+                [smv performSegueWithIdentifier:@"newServiceSegue" sender:self];
+                
+            }
         }
             break;
         case 1: //help
         {
             if(indexPath.row == 0) // How does it work section - > it will be implemented later
             {
-             
+                
               
             }
             else{
@@ -82,16 +108,17 @@ WebViewController * webViewController;
                 [self addChildViewController:webViewController];
                 [self.container addSubview:webViewController.view];
                 [webViewController didMoveToParentViewController:self];
-                
-                
-                
-            
-            }
+                }
         }
             break;
         case 2: // user actions
         {
-            
+          
+            //;log out
+            if(indexPath.row == 1)
+            {
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            }
         }
             break;
 

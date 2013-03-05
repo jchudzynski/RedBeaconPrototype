@@ -13,7 +13,6 @@
 @property (strong, nonatomic) NSString * url;
 @property (strong, nonatomic) NSString * htmlString;
 @property (strong, nonatomic) NSString * videoURL;
-
-
+@property (strong, nonatomic) IBOutlet UIWebView *webview;
 
 @end

@@ -1,6 +1,6 @@
 {
     "sections":[
-                {"header":"Current Home Services Requests","cells":[{"title":"Current Services"},{"title":"Request a New Service"}]},
+                {"header":"Current Home Services Requests","cells":[{"title":"Current Services"}]},
                 {"header":"Help","cells":[{"title":"How it Works", "viewtype":"regular", "url":"redbeaconhelp"},{"title":"Watch Our Video"}, {"title":"FAQ","viewtype":"embed", "url":"redbeaconhelp"}]},
                 {"header":"User","cells":[{"title":"Give us your feedback"},{"title":"Log Out"}]}
                ]
