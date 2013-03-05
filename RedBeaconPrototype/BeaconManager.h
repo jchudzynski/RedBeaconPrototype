@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NewServiceRequest.h"
 //default menu in 
 #define menuJSON @"mainmenu.json"
 #define userServicesJSON @"userservices.json"
@@ -24,12 +25,16 @@
 //getting data from local or network locations
 - (void)getDataFor:(NSString *)urlString localFile:(BOOL)local forViewController:(id)viewController;
 
-
-
 //updating user choices when placing new order
 -(void) addUserChoice:(NSDictionary *)choice;
 
-@property (nonatomic,retain) NSMutableArray * userChoicesArray;
+
+@property (nonatomic,strong) NSString * userId;
+@property (nonatomic,strong) NSMutableArray * userChoicesArray;
 @property (nonatomic,assign) id<ManagerDelegate> delegate;
+@property (nonatomic,strong) NewServiceRequest * newServiceRequest;
+
+
+
 
 @end

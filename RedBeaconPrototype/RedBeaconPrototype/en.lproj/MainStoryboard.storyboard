@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="5Sf-AK-cZw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3080" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="5Sf-AK-cZw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2078"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -1050,7 +1050,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellA" id="wht-Uk-mN6">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCellId" id="wht-Uk-mN6" customClass="CVCell">
                                         <rect key="frame" x="0.0" y="0.0" width="176" height="176"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1064,11 +1064,14 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="icon" destination="KqX-15-5Ra" id="Aik-Mg-raE"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Klr-6b-5TP">
-                                <rect key="frame" x="528" y="684" width="165" height="44"/>
+                                <rect key="frame" x="602" y="684" width="165" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Next" backgroundImage="red.png">
@@ -1082,8 +1085,23 @@
                                     <action selector="goForward:" destination="mBS-7Z-ucz" eventType="touchUpInside" id="FUV-lu-b7w"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jZS-DJ-Qrh">
+                                <rect key="frame" x="411" y="684" width="165" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Add Media" backgroundImage="red.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addMediaAction:" destination="mBS-7Z-ucz" eventType="touchUpInside" id="nuf-vW-BhV"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wSZ-DO-bNZ">
-                                <rect key="frame" x="321" y="684" width="165" height="44"/>
+                                <rect key="frame" x="221" y="684" width="165" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Back" backgroundImage="red.png">
@@ -1105,6 +1123,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="mediaButton" destination="jZS-DJ-Qrh" id="692-9P-gnx"/>
                         <outlet property="mediaCollectionView" destination="DwV-Jk-bFR" id="rca-1u-1Fx"/>
                     </connections>
                 </viewController>
@@ -1124,6 +1143,13 @@
         <image name="redbeaconlogo.png" width="304" height="111"/>
     </resources>
     <classes>
+        <class className="CVCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CVCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="cellTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="icon" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
         <class className="MainMenuViewController" superclassName="ViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainMenuViewController.h"/>
             <relationships>
@@ -1134,7 +1160,10 @@
         <class className="MediaViewController" superclassName="ViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MediaViewController.h"/>
             <relationships>
+                <relationship kind="action" name="addMediaAction:"/>
                 <relationship kind="action" name="goBack:"/>
+                <relationship kind="action" name="goForward:"/>
+                <relationship kind="outlet" name="mediaButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="mediaCollectionView" candidateClass="UICollectionView"/>
             </relationships>
         </class>
@@ -1148,6 +1177,10 @@
         <class className="NewServiceReviewViewController" superclassName="ViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NewServiceReviewViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="goBack:"/>
+                <relationship kind="action" name="submitRequest:"/>
+                <relationship kind="action" name="useMyLocation:"/>
                 <relationship kind="outlet" name="zipCodeTextField" candidateClass="UITextField"/>
             </relationships>
         </class>
@@ -1189,6 +1222,9 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
         <class className="UnderlinedButton" superclassName="UIButton">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UnderlinedButton.h"/>

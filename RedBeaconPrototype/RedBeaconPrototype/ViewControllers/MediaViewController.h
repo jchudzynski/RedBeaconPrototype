@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface MediaViewController : ViewController
+@interface MediaViewController : ViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIActionSheetDelegate>
 
 @end

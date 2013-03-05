@@ -28,6 +28,8 @@
     return self;
 }
 
+-
+
 -(void) addUserChoice:(NSDictionary *)choice{
     
     if(!_userChoicesArray){
@@ -73,21 +75,7 @@
 }
 
 
--(void)getJSON:(NSString *)json foViewController:(id)viewController{
-
-    NSURL *url = [NSURL URLWithString:json];
-
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
-    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-
-    [NSURLConnection sendAsynchronousRequest:urlRequest queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
-     {
-         if ([data length] > 0 && error == nil)
-             NSLog(@"");
-         else
-             NSLog(@"error");
-     }];
-}
+//Network Calls - it can be used for getting data from local resources
 
 -(void)getDataFor:(NSString *)urlString localFile:(BOOL)local forViewController:(id)viewController{
     dispatch_async(kBgQueue, ^{
@@ -114,7 +102,14 @@
         });
 }
 
+//uploading request
+-(void)sendRequest{
     
+}
+
+
+
+
 
 
 
