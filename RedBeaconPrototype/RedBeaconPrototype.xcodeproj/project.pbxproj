@@ -13,6 +13,7 @@
 		4F41FF6916E50F360098AB91 /* DrillDownDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F41FF6816E50F360098AB91 /* DrillDownDataSource.m */; };
 		4F41FF6C16E529710098AB91 /* NewServiceMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F41FF6B16E529710098AB91 /* NewServiceMenuViewController.m */; };
 		4F41FF6F16E549500098AB91 /* StepsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F41FF6E16E549500098AB91 /* StepsDataSource.m */; };
+		4F41FF7116E664A30098AB91 /* RedBeaconPrototype.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F41FF7016E664A30098AB91 /* RedBeaconPrototype.jpg */; };
 		4F84928216E102D300F26F1D /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F84928116E102D300F26F1D /* red.png */; };
 		4F84928416E103FB00F26F1D /* redbeaconlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F84928316E103FB00F26F1D /* redbeaconlogo.png */; };
 		4F84928816E10B4000F26F1D /* artwork.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F84928716E10B4000F26F1D /* artwork.txt */; };
@@ -64,7 +65,7 @@
 		8250DF4D16E16B5A00A8DFFB /* RegularCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250DF4C16E16B5A00A8DFFB /* RegularCell.m */; };
 		8250DF5016E16CFA00A8DFFB /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250DF4F16E16CFA00A8DFFB /* ButtonCell.m */; };
 		82B3BDA816E5C49C00F16E8E /* NewServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B3BDA716E5C49C00F16E8E /* NewServiceRequest.m */; };
-		82E8ED1D16E1A6880044E826 /* design in Resources */ = {isa = PBXBuildFile; fileRef = 82E8ED1C16E1A6880044E826 /* design */; };
+		82E8ED1D16E1A6880044E826 /* designnotes in Resources */ = {isa = PBXBuildFile; fileRef = 82E8ED1C16E1A6880044E826 /* designnotes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		4F41FF6B16E529710098AB91 /* NewServiceMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewServiceMenuViewController.m; path = ViewControllers/NewServiceMenuViewController.m; sourceTree = "<group>"; };
 		4F41FF6D16E549500098AB91 /* StepsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StepsDataSource.h; path = Tables/StepsDataSource.h; sourceTree = "<group>"; };
 		4F41FF6E16E549500098AB91 /* StepsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StepsDataSource.m; path = Tables/StepsDataSource.m; sourceTree = "<group>"; };
+		4F41FF7016E664A30098AB91 /* RedBeaconPrototype.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RedBeaconPrototype.jpg; sourceTree = "<group>"; };
 		4F84928116E102D300F26F1D /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		4F84928316E103FB00F26F1D /* redbeaconlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redbeaconlogo.png; sourceTree = "<group>"; };
 		4F84928716E10B4000F26F1D /* artwork.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = artwork.txt; sourceTree = "<group>"; };
@@ -159,7 +161,7 @@
 		8250DF4F16E16CFA00A8DFFB /* ButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ButtonCell.m; path = Tables/ButtonCell.m; sourceTree = "<group>"; };
 		82B3BDA616E5C49C00F16E8E /* NewServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewServiceRequest.h; path = CustomClasses/NewServiceRequest.h; sourceTree = "<group>"; };
 		82B3BDA716E5C49C00F16E8E /* NewServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewServiceRequest.m; path = CustomClasses/NewServiceRequest.m; sourceTree = "<group>"; };
-		82E8ED1C16E1A6880044E826 /* design */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = design; sourceTree = "<group>"; };
+		82E8ED1C16E1A6880044E826 /* designnotes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = designnotes; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,12 +194,13 @@
 			isa = PBXGroup;
 			children = (
 				4FF9287516E3CEF100287F35 /* proffesional.jpg */,
+				4F41FF7016E664A30098AB91 /* RedBeaconPrototype.jpg */,
 				4FF9287116E3CD1100287F35 /* calendarIcon.jpg */,
 				4FF9286F16E3B89000287F35 /* button.png */,
 				4F84928116E102D300F26F1D /* red.png */,
 				4F84928316E103FB00F26F1D /* redbeaconlogo.png */,
 				4F84928716E10B4000F26F1D /* artwork.txt */,
-				82E8ED1C16E1A6880044E826 /* design */,
+				82E8ED1C16E1A6880044E826 /* designnotes */,
 				4FF9287316E3CDB500287F35 /* places.jpg */,
 				4F84928916E10B9000F26F1D /* fblogin.png */,
 				4F84928F16E111C400F26F1D /* Pro-Hero-Opt.png */,
@@ -440,7 +443,7 @@
 				4F84929016E111C400F26F1D /* Pro-Hero-Opt.png in Resources */,
 				4FF9285C16E117F100287F35 /* fbsignup.png in Resources */,
 				4FF9285E16E12CB200287F35 /* mainmenu.json in Resources */,
-				82E8ED1D16E1A6880044E826 /* design in Resources */,
+				82E8ED1D16E1A6880044E826 /* designnotes in Resources */,
 				4FF9286E16E2F39600287F35 /* availableservices.json in Resources */,
 				4FF9287016E3B89000287F35 /* button.png in Resources */,
 				4FF9287216E3CD1100287F35 /* calendarIcon.jpg in Resources */,
@@ -448,6 +451,7 @@
 				4FF9287616E3CEF100287F35 /* proffesional.jpg in Resources */,
 				4FF9287816E3D07500287F35 /* CurrentServicesDataSource.h in Resources */,
 				4FF9288316E4034800287F35 /* userservices.json in Resources */,
+				4F41FF7116E664A30098AB91 /* RedBeaconPrototype.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
