@@ -32,7 +32,7 @@
 @property (nonatomic,strong) NSString * userId;
 @property (nonatomic,strong) NSMutableArray * userChoicesArray;
 @property (nonatomic,assign) id<ManagerDelegate> delegate;
-@property (nonatomic,strong) NewServiceRequest * newServiceRequest;
+@property (nonatomic,strong) NewServiceRequest * serviceRequest;
 
 
 

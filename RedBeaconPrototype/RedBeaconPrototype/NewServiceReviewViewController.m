@@ -27,6 +27,9 @@
 }
 
 - (IBAction)submitRequest:(id)sender {
+    UIAlertView * alert=[[UIAlertView alloc]initWithTitle:@"Message" message:@"Your service request has been sent." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    [alert show];
+    [self dismissViewControllerAnimated:YES completion:NO];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

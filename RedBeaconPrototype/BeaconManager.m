@@ -23,12 +23,14 @@
 
 - (id)init {
     if (self = [super init]) {
-
+    //initialize new service request:
+        if(_serviceRequest){
+            _serviceRequest = [[NewServiceRequest alloc]init];
+        }
     }
     return self;
 }
 
--
 
 -(void) addUserChoice:(NSDictionary *)choice{
     
@@ -53,6 +55,7 @@
     if(check == false){
         [self.userChoicesArray addObject:choice];
     }
+    self.serviceRequest.userChoices = self.userChoicesArray;
     [_delegate itemsUpdated:self.userChoicesArray];
 }
 
@@ -104,7 +107,9 @@
 
 //uploading request
 -(void)sendRequest{
+    //upload files
     
+    //send the data
 }
 
 
